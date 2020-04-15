@@ -1,20 +1,25 @@
-div {
-  background: lightblue;
-  padding: 1em;
-  margin: 1em;
-}
-
 section {
- display: flex;
- border: 1px solid red;
- background: pink;
- margin: 1em auto 1em auto;;
+	display: flex;
+	border: 1px solid red;
+	background: pink;
+	margin: 1em auto 1em auto;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 40em;
+	width: 80%;
 }
 
 section:first-child {
-  border-color: green;
-  background: green;
+	border-color: green;
+	background: green;
 }
+
+div {
+	background: lightblue;
+	padding: 1em;
+	margin: 1em;
+}
+
 section:first-child div {
-  background: blue;
+	background: blue;
 }
