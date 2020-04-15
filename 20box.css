@@ -1,13 +1,13 @@
 div {
-  display: inline-block;
   background: lightblue;
   padding: 1em;
   margin: 1em;
 }
+
 section {
+ display: flex;
  border: 1px solid red;
  background: pink;
- display: inline-block;
  margin: 1em auto 1em auto;;
 }
 
