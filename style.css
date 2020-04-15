@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+h1,
+h2,
+h3,
+blockquote {
+  font-family: "Abril Fatface", cursive;
+}
+
+blockquote {
+  float: right;
+  position: relative;
+}
+blockquote p {
+  text-align: right;
+}
+blockquote:before, blockquote:after {
+  display: block;
+  content: "";
+  box-sizing: border-box;
+  height: calc(50% - 0.1rem);
+  position: absolute;
+  left: -5px;
+  right: -5px;
+  overflow: visible !important;
+  border: 1px solid black;
+  transition: transform 0.6s;
+}
+blockquote:before {
+  top: -5px;
+  border-bottom: 0;
+  border-radius: 36px 36px 0 0;
+}
+blockquote:after {
+  bottom: -5px;
+  border-top: 0;
+  border-radius: 0 0 36px 36px;
+}
+blockquote:hover:before, blockquote:hover:after {
+  transform: rotateZ(180deg) rotateX(180deg);
+  height: 60%;
+}
+
+body {
+  background: palegreen;
+  margin: 0;
+  display: grid;
+  flex-direction: column;
+  position: relative;
+}
+
+h2 {
+  padding-top: 100px;
+  margin-top: -80px;
+}
+
+header {
+  background-image: url(http://stayathome-syllabus.greenfox.academy/week01/assets/first-website-header.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #2a3517;
+}
+nav li {
+  float: left;
+}
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  min-width: 70px;
+}
+nav li.active a {
+  background: #132002;
+}
+nav li a:hover {
+  background: #020;
+}
+
+div.head,
+main {
+  margin: 0 auto;
+}
+div.head ul,
+main ul {
+  overflow: auto;
+}
+div.head article section,
+main article section {
+  margin-top: 60px;
+}
+div.head article section:first-child,
+main article section:first-child {
+  margin-top: 0;
+}
+div.head article section:nth-child(1n + 2),
+main article section:nth-child(1n + 2) {
+  clear: both;
+}
+
+.head {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0 0 30px;
+  padding: 0 10px;
+}
+
+.head::after {
+  content: "";
+  padding-top: 10%;
+  width: 50%;
+}
+
+.head h3,
+.head h1 {
+  margin: 0;
+}
+
+blockquote {
+  display: inline-block;
+  position: relative;
+  background: #405020;
+  color: lightgreen;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+blockquote p {
+  margin: 0 10px 0;
+}
+
+@media only screen and (min-width: 650px) {
+  header {
+    min-height: 30vw;
+    max-width: 30vw;
+    float: left;
+    margin: 0 30px 30px 0;
+  }
+
+  .head::after {
+    padding-top: 130%;
+  }
+
+  article {
+    margin: 0 100px;
+  }
+
+  h2 {
+    padding-top: 50px;
+    margin-top: -30px;
+  }
+}
+@media only screen and (max-width: 335px) {
+  header {
+    padding-top: 30px;
+    height: auto;
+  }
+
+  div.head {
+    height: auto !important;
+  }
+}
